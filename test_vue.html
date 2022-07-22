@@ -1,0 +1,25 @@
+<html>
+<script src="https://unpkg.com/vue@next"></script>
+<div id="app">
+  {{ message }}
+</div>
+<div id="app2">
+  {{ message2 }}
+</div>
+<script>
+  const vm = Vue.createApp({
+    data() {
+      return {
+        message: 'Hello Vue 3.0!'
+      }
+    }
+  })
+  vm.mount('#app');
+
+  Vue.createApp({
+    data: () => ({ message2: 'Hello World' })
+  }).mount('#app2');
+
+</script>
+
+</html>
